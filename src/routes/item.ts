@@ -1,9 +1,23 @@
 import { Router, Request, Response } from "express";
+import {
+  deleteItem,
+  getItem,
+  getItems,
+  postItem,
+  updateItem,
+} from "../controller/item";
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.send({ data: "AQUI_VAN_LOS_MODELOS" });
-});
+//Consultar todos los items
+router.get("/", getItems);
+//Consultar el item por el {id}
+router.get("/:id", getItem);
+//Crear un item
+router.post("/", postItem);
+//Editar el item por el {id}
+router.put("/:id", updateItem);
+//Borrar el item por el {id}
+router.delete("/:id", deleteItem);
 
 export { router };
