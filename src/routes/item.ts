@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import { logMiddleware } from "../middleware/log";
 import {
   deleteItem,
   getItem,
@@ -7,12 +8,13 @@ import {
   updateItem,
 } from "../controller/item";
 
+
 const router = Router();
 
 //Consultar todos los items
 router.get("/", getItems);
 //Consultar el item por el {id}
-router.get("/:id", getItem);
+router.get("/:id", logMiddleware, getItem);
 //Crear un item
 router.post("/", postItem);
 //Editar el item por el {id}
