@@ -1,6 +1,6 @@
 <img src='./README/readme.png' width="100%" alt="Banner" />
 
- # Key Features:
+# Key Features:
 
 - Language: TypeScript.
 - Authentication: Implementation of JWT (JSON Web Tokens).
@@ -10,7 +10,9 @@
 - Deployment: Deployment on the cloud using AWS.
 
 # API Endpoints
+
 ### Items
+
 - GET http://localhost:3002/item: Retrieve all item
 - POST http://localhost:3002/item: Create a new item
 - GET http://localhost:3002/item/{id}: Retrieve a item by ID
@@ -18,5 +20,6 @@
 - DELETE http://localhost:3002/item/{id}: Delete a item by ID
 
 ### User
-- POST http://localhost:3002/auth/register: Create a new user 
 
+- POST http://localhost:3002/auth/register: Create a new user
+- POST http://localhost:3002/auth/login: Login user
