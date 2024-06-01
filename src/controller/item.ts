@@ -30,10 +30,9 @@ export const postItem = async ({ body }: Request, res: Response) => {
   }
 };
 
-export const updateItem = async(req: Request, res: Response) => {
+export const updateItem = async({params, body}: Request, res: Response) => {
   try {
-    const {id} = req.params;
-    const {body} = req.body;
+    const {id} = params;
     const responseCar = await updateCar(id, body);
     res.send(responseCar);
   } catch (error) {

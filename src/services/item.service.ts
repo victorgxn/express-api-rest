@@ -17,8 +17,7 @@ export const insertCar = async (item: Car) => {
 }
 
 export const updateCar = async (id:string, data: Car) => {
-    const responseUpdate = await ItemModel.findOneAndUpdate({_id:id
-    }, data, {new: true});
+    const responseUpdate = await ItemModel.findOneAndUpdate({_id:id}, data, {new: true});
     return responseUpdate;
 }
 
