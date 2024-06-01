@@ -3,21 +3,30 @@ import { Car } from "../interfaces/car.interfaces";
 
 const ItemSchema = new Schema<Car>(
     {
+        name: {
+            type:String,
+            required:true,
+        },
         color: {
-            type:String
+            type:String,
+            required:true,
         },
         gas: {
             type:String,
+            required:true,
             enum:["gasoline", "electric"]
         },
         year: {
-            type:Number
+            type:Number,
+            required:true,
         },
-        descripcion: {
-            type:String
+        description: {
+            type:String,
+            required:true,
         },
         price: {
-            type:Number
+            type:Number,
+            required:true,
         }
     },
     {
