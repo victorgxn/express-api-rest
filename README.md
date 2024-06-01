@@ -3,7 +3,7 @@
 # Key Features:
 
 - Language: TypeScript.
-- Authentication: Implementation of JWT (JSON Web Tokens).
+- Authentication/Middleware: Implementation of JWT (JSON Web Tokens). Multer, Bcrypt
 - Architecture: Use of the MVC (Model-View-Controller).
 - Database: MongoDB, managed through Mongoose.
 - Containers: Docker Compose to manage services and dependencies, ensuring consistency across development and production environments.
