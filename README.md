@@ -23,3 +23,9 @@
 
 - POST http://localhost:3002/auth/register: Create a new user
 - POST http://localhost:3002/auth/login: Login user
+
+### Orders
+- POST http://localhost:3002/order: Bearer token jwt
+### Upload
+
+
