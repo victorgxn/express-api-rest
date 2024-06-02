@@ -27,5 +27,5 @@
 ### Orders
 - GET http://localhost:3002/order: Bearer token jwt
 ### Upload
-- GET http://localhost:3002/upload: Upload files
+- POST http://localhost:3002/upload: Upload files
 
