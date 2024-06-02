@@ -30,5 +30,9 @@ export const loginUser = async ({ email, password }: Auth) => {
   const isCorrect = await verified(password, passwordHash);
   if (!isCorrect) return "Los credenciales no son correctos";
   const token = generateToken(checkIs.email);
-  return token;
+  const data = {
+    token,
+    user: checkIs,
+  };
+  return data;
 };

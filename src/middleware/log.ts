@@ -1,6 +1,10 @@
-import {NextFunction, Request, Response} from 'express';
+import { NextFunction, Request, Response } from "express";
 
-export const logMiddleware = (req: Request, res: Response, next:NextFunction) => {
-    console.log('Hola soy el LOG');
-    next();
-}
+const logMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  const header = req.headers;
+  const userAgent = header["user-agent"];
+  console.log("user-agent", userAgent);
+  next();
+};
+
+export { logMiddleware };
